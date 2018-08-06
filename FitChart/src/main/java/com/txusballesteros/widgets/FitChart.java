@@ -117,6 +117,11 @@ public class FitChart extends View {
         invalidate();
     }
 
+    public void setValueStrokeColor(int color) {
+        valueStrokeColor = color;
+        valueDesignPaint.setColor(valueStrokeColor);
+    }
+
     private Paint buildPaintForValue() {
         Paint paint = getPaint();
         paint.setStyle(Paint.Style.STROKE);
@@ -201,6 +206,7 @@ public class FitChart extends View {
         valueDesignPaint.setStrokeCap(Paint.Cap.ROUND);
         valueDesignPaint.setStrokeWidth(strokeSize);
     }
+
 
     private Paint getPaint() {
         if (!isInEditMode()) {
